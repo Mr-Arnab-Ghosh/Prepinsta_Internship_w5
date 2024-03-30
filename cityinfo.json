@@ -1,0 +1,19 @@
+{
+    "places": [
+      {
+        "info": "Delhi,[a] officially the National Capital Territory (NCT) of Delhi, is a city and a union territory of India containing New Delhi, the capital of India",
+        "name": "Delhi",
+        "image": "https://images.unsplash.com/photo-1592639296346-560c37a0f711?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZGVsaGl8ZW58MHx8MHx8fDA%3D"
+      },
+      {
+        "info": " The landscape of Pune district is distributed triangularly in western Maharashtra at the foothills of the Sahyadri Mountains.",
+        "name": "Pune",
+        "image": "https://images.unsplash.com/photo-1618805714320-f8825019c1be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHVuZXxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        "info": "Bangalore is considered to be one of the fastest-growing global major metropolises.",
+        "name": "Bangalore",
+        "image": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFuZ2Fsb3JlfGVufDB8fDB8fHww"
+      }
+    ]
+}

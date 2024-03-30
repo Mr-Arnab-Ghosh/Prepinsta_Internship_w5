@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Cities</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Indian Cities</h1>
+    <div id="cities-container"></div>
+    <script>
+        const citiesContainer = document.getElementById('cities-container');
+
+        const fetchCities =  () => {
+          try {
+              fetch('https://api.npoint.io/a32f582fdce08ce16e8d/places/')
+              .then(res => res.json())
+              .then(data=>displayCities(data))
+            //   if (!response.ok) {
+            //     throw new Error(`Error fetching cities: ${response.status}`);
+            //   }
+            //   const citiesData =  res.json();
+            //   displayCities(citiesData);
+            } catch (error) {
+              console.log('Error fetching cities:', error);
+              alert('An error occurred while fetching city data. Please try again later.');
+            }
+        };
+
+        const displayCities = (indiaCities) => {
+          indiaCities.forEach((city) => {
+            const cityCard = document.createElement('div');
+            cityCard.classList.add('city-card');
+        
+            const cityName = document.createElement('h2');
+            cityName.textContent = city.name;
+        
+            const cityImage = document.createElement('img');
+            // cityImage.id='city-image';
+            cityImage.src = city.image;
+        
+            const cityDetails = document.createElement('div');
+            cityDetails.classList.add('city-details');
+        
+            const cityInfo = document.createElement('p');
+            cityInfo.classList.add('city-info');
+            cityInfo.innerHTML = `Info: <span>${city.info}</span>`;
+        
+            cityDetails.appendChild(cityInfo);
+        
+            cityCard.appendChild(cityName);
+            cityCard.appendChild(cityImage);
+            cityCard.appendChild(cityDetails);
+        
+            citiesContainer.appendChild(cityCard);
+          });
+        };
+
+        fetchCities();
+    </script>
+</body>
+</html>
